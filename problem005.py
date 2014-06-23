@@ -1,14 +1,14 @@
-def main():
-    counter = 1
-    while True:
-        isOk = True
-        for i in range(1, 20):
-            if counter % i != 0:
-                isOk = False
-                break
-        if isOk == True:
-            print(counter)
-            break
-        counter += 1
+#!/usr/bin/env python
 
-main()
+i = 20
+while True:
+    correct = True
+    for j in range(3, 21):
+        if i % j != 0:
+            correct = False
+            break
+    if correct:
+        break
+    i += 20
+
+print i
