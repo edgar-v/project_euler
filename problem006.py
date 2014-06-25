@@ -1,13 +1,3 @@
-def squares():
-    total = 0
-    for i in range(0, 101):
-        total += i ** 2
-    return total
+#!/usr/bin/env python
 
-def squaresum():
-    total = 0
-    for i in range(0, 101):
-        total += i
-    return total ** 2
-
-print(squaresum() - squares())
+print sum([x for x in range(101)]) ** 2 - sum([x ** 2 for x in range(101)])

@@ -1,12 +1,13 @@
+#!/usr/bin/env python
+
 def main():
-    a = open("oppgave11.txt", "r")
-    b = a.read()
-    table = b.split(" ")
-    table[-1] = '48'
+
+    a = open("problem011.txt", "r")
+    table = [int(x) for x in a.read().split()]
+    a.close()
+
     tot = 0
 
-    for i in range(0, len(table)):
-        table[i] = int(table[i])
     print(table)
     t = tot
     p = 0
