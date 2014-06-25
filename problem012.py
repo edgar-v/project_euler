@@ -1,22 +1,44 @@
-import time
-import math
+#!/usr/bin/env python
 
-def main():
-    counter = 2
-    maxdivs = 1
+import math
+import operator
+
+def triangle_number():
+    """returns the next triangle number"""
     val = 1
+    counter = 2
     while True:
+        yield val
         val += counter
-        divs = 0
-        for i in range(2, int(math.sqrt(val)) + 1):
-            if counter % i == 0:
-                divs += 1
-        if divs > maxdivs:
-            print(divs, counter, val)
-            maxdivs = divs
-        if divs > 500:
-            print(val, counter)
-            break
         counter += 1
 
-main()
+def numDivisors(n):
+    orign = n
+    divisors = []
+    counter = 2
+    while counter < n:
+        if n % counter == 0:
+            divisors.append(counter)
+            n /= counter
+            counter = 2
+        else:
+            counter += 1
+    divisors.append(n)
+    #print orign, divisors
+
+    divs =  reduce(operator.mul, [divisors.count(x) + 1 for x in set(divisors)])
+    #print "tot: %s" % divs
+    return divs
+
+gen = triangle_number()
+
+maxdivs = 1
+while True:
+    val = gen.next()
+    divs = numDivisors(val)
+
+    if divs > maxdivs:
+        maxdivs = divs
+    if maxdivs > 500:
+        print(val)
+        break

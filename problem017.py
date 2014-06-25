@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 base = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 extras = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
 tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
@@ -21,7 +23,5 @@ for i in range(100, 1000):
         firstTwenty += len(base[int(a[0])]) + 10 + len(tens[int(a[1])]) + len(base[int(a[2])])
     if i % 100 == 0:
         firstTwenty -= 3
-    if i < 500:
-        print(i, firstTwenty - prev)
 firstTwenty += 11
 print(firstTwenty)

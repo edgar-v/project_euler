@@ -1,4 +1,6 @@
-fil = open("oppgave67.txt", "r")
+#!/usr/bin/env python
+
+fil = open("problem018.txt", "r")
 
 triangle = []
 numLines = 0
