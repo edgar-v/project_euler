@@ -29,10 +29,9 @@ int main()
         if (b == i && b != a)
         {
             total += b;
-            cout << i << " " <<  b << endl;
         }
     }
 
-    cout << "total: " <<  total << endl;
+    cout << total << endl;
     return 0;
 }

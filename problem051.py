@@ -1,4 +1,4 @@
-#!/bin/python2
+#!/usr/bin/env python
 
 import math
 import itertools

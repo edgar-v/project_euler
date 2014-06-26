@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    ifstream fin("problem42.txt");
+    ifstream fin("problem042.txt");
     string text;
     fin >> text;
     vector<string> words;
