@@ -1,21 +1,16 @@
-def func():
-    num = 600851475143 
-    top = 775147
-    best = 0
-    for i in range(1, top + 1):
-        if num % i == 0:
-            if prime(i) == True:
-               best = i
-    return best
+#!/usr/bin/env python
 
-def prime(a):
-    for i in range(2, a):
-        if a % i == 0:
-            return False
-    
-    return True
+num = 600851475143
+counter = 2
 
-print(prime(17))
-print(prime(8))
-print(prime(37))
-print(func())
+while num > 1:
+    while counter < num:
+        if num % counter == 0:
+            num /= counter
+            counter = 2
+            break
+        else:
+            counter += 1
+    if counter == num:
+        print num
+        break

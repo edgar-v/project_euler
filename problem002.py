@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def func():
     a = 1
     b = 2
@@ -11,3 +13,4 @@ def func():
     return total
 
 print(func())
+

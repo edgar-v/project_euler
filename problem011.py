@@ -1,13 +1,13 @@
+#!/usr/bin/env python
+
 def main():
-    a = open("oppgave11.txt", "r")
-    b = a.read()
-    table = b.split(" ")
-    table[-1] = '48'
+
+    a = open("problem011.txt", "r")
+    table = [int(x) for x in a.read().split()]
+    a.close()
+
     tot = 0
 
-    for i in range(0, len(table)):
-        table[i] = int(table[i])
-    print(table)
     t = tot
     p = 0
     for i in range(0, len(table)):
@@ -20,7 +20,5 @@ def main():
             tot = max(tot, table[i] * table[i+1] * table[i+2] * table[i+3])
         if i + 63 < len(table) and i % 20 <= 16:
             tot = max(tot, table[i] * table[i+21] * table[i+42] * table[i+63])
-        if tot != t:
-            print(i, table[i], tot)
     print(tot)
 main()

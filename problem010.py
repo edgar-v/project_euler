@@ -1,21 +1,7 @@
-import time
+#!/usr/bin/env python
 
-def main():
-    total = 2
-    a = [2]
-    counter = 0
-    for i in range(3, 2000001):
-        isOk = True
-        for j in range(0, len(a)):
-            if i % a[j] == 0:
-                isOk = False
-                break
-        if isOk == True:
-            counter += 1
-            if counter % 1000 == 0:
-                print(i)
-            a.append(i)
-            total += i
-    print(total)
+import euler
 
-main()
+primes = euler.sieve_of_E(2000000)
+
+print sum([x for x in range(2, len(primes)) if primes[x] == True])

@@ -1,14 +1,16 @@
-def main():
-    counter = 1
-    while True:
-        isOk = True
-        for i in range(1, 20):
-            if counter % i != 0:
-                isOk = False
-                break
-        if isOk == True:
-            print(counter)
-            break
-        counter += 1
+#!/usr/bin/env python
 
-main()
+import math
+step = 20 * 19 * 18 * 17
+i = step
+while True:
+    correct = True
+    for j in [11,12,13,14,15,16,17,18,19,20]:
+        if i % j != 0:
+            correct = False
+            break
+    if correct:
+        break
+    i += step   
+
+print i

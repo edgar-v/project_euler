@@ -1,11 +1,3 @@
-def main():
-    num = 100
-    tot = 1
-    total = 0
-    for i in range(1, 101):
-        tot *= i
-    string = str(tot)
-    for i in range(0, len(string)):
-        total += int(string[i])
-    print(total)
-main()
+#!/usr/bin/env python
+
+print sum([int(x) for x in str(reduce(lambda x,y : x*y, [x for x in range(1,101)]))])

@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    ifstream fin("problem22.txt");
+    ifstream fin("problem022.txt");
     vector<string> names;
 
     string namestring = "";

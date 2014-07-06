@@ -1,17 +1,3 @@
-def palindrom(a):
-    a = str(a)
-    for i in range(0, len(a)):
-        if a[i] != a[-i - 1]:
-            return False
-    return True
+#!/usr/bin/env python
 
-def main():
-    best = 0
-    for i in range(0, 1000):
-        for j in range(i, 1000):
-            product = i * j
-            if palindrom(product) == True and product > best:
-                best = product
-    print(best)
-
-main()
+print max([x*y for x in range(1000) for y in range(1000) if str(x*y) == str(x*y)[::-1]])
