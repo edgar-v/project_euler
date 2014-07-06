@@ -1,46 +1,46 @@
 #include <iostream>
-#include <sstream>
 #include <string>
 #include <algorithm>
-
-using namespace std;
-
-string toStr(long long int a)
-{
-    stringstream ss;
-    ss << a;
-    return ss.str();
-}
+#include <cmath>
 
 int main()
 {
-    long long int i = 318000000;
+    std::string iString = "1020304050607080900";
+    long long int i = std::sqrt(std::stoi(iString));
     while (true)
     {
-        long long int is = i * i;
-        if (i % 100000 == 0)
-        {
-            cout << is << endl;
-        }
-        string text = toStr(is);
-        if (text.size() < 18)
+        long long int iSquared = i * i;
+        if (iSquared % 10 != 0)
         {
             i++;
             continue;
         }
+        std::string iText = std::to_string(iSquared);
+        if (iText.size() < 19)
+        {
+            i++;
+            continue;
+        }
+        std::cout << iSquared << std::endl;
         bool good = true;
         for (int j = 0; j < 9; j++)
         {
-            if (text[j*2] != toStr(j+1)[0])
+            std::string jString = std::to_string(j+1);
+            if (iText[j*2] != jString[0])
             {
+                int num = std::stoi(iText[j*2]);
+                if (j == 1 && num > 2)
+                {
+                    i = std::sqrt(
+                }
                 good = false;
                 i++;
                 break;
             }
         }
-        if (good == true && text[18] == '0')
+        if (good == true)
         {
-            cout << i << endl;
+            std::cout << i << std::endl;
             return 0;
         }
     }

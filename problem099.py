@@ -1,4 +1,5 @@
-f = open("problem99.txt")
+#!/usr/bin/python
+f = open("problem099.txt")
 lines = f.readlines()
 
 best = 0
