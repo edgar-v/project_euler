@@ -12,3 +12,10 @@ def sieve_of_E(n):
                 primes[j] = False
     return primes
     
+def gcd(x, y):
+    while x != y:
+        if x > y:
+            x = x - y
+        else:
+            y = y - x
+    return x

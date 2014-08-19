@@ -48,5 +48,3 @@ while True:
         currentNumber = i
         currentNumberString = str(currentNumber)
         continue
-
-         

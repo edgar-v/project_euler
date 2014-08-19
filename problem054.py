@@ -46,7 +46,7 @@ def hand_value(hand):
 
 player1_wins = 0
 
-f = open("hands.txt", "r")
+f = open("problem054.txt", "r")
 
 linenum = -1
 for line in f:
